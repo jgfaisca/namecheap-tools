@@ -97,6 +97,8 @@ case "$1" in
       ;;
 esac
 
+[ ! -d "$RESPONSE_DIR" ] && mkdir -p "$RESPONSE_DIR"
+
 # API call
 REQUEST="curl --verbose '${URL_DEFAULT}?\
 ApiUser=${API_USER}&\
