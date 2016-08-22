@@ -3,9 +3,18 @@
 # Programmatically call namecheap API. You need to change API_USER,
 # API_KEY and USER_NAME. API Response is saved on /tmp/response.xml
 #
-# Dependencies: curl, dig
+# dependencies: 
+#   - add curl and dig
+#   - Internet access
 #
-# Author: Jose G. Faisca <jose.faisca@gmail.com>>
+# usage:
+#   ./namecheap-api-cal.sh <--production|--sandbox> '<command for execution>'
+#
+# example:
+#   ./namecheap-api-cal.sh --sandbox 'namecheap.domains.dns.getList&SLD=domain&TLD=com'    
+#
+# authors: 
+#    Jose G. Faisca <jose.faisca@gmail.com>>
 #
 
 # Help function
