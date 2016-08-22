@@ -10,12 +10,13 @@
 #
 # usage:
 # ./namecheap-api-call.sh <--production|--sandbox> '<command>'
-#  --production: Set API production server environment   
-#  --sandbox   : Set API test server environment 
-#  command     : Command for execution
+#
+#  --production   set API production server environment   
+#  --sandbox      set API test server environment 
+#  command        API command for execution
 # 
 # example:
-# Gets a list of DNS servers associated with the requested domain using API sandbox
+# Gets a list of DNS servers associated with the requested domain using sandbox
 # ./namecheap-api-call.sh --sandbox 'namecheap.domains.dns.getList&SLD=domain&TLD=com'    
 #
 # authors: 
@@ -26,11 +27,15 @@
 # Help function
 function show_help() {
    echo
-   echo "Usage:"
+   echo "usage:"
    echo "./$(basename "$0") <--production|--sandbox> '<command>'"
    echo
-   echo "Example:"
-   echo "Gets a list of DNS servers associated with the requested domain using API sandbox"
+   echo "   --production   set API production server environment"   
+   echo "   --sandbox      set API test server environment" 
+   echo "   command        API command for execution"
+   echo
+   echo "example:"
+   echo "Gets a list of DNS servers associated with the requested domain using sandbox"
    echo "./$(basename "$0") --sandbox 'namecheap.domains.dns.getList&SLD=domain&TLD=com'"
    echo
    exit 1
