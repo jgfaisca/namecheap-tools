@@ -13,7 +13,7 @@
 #
 #  --production   set API production server environment   
 #  --sandbox      set API test server environment 
-#  command        API command for execution
+#    command      API command for execution
 # 
 # example:
 # Gets a list of DNS servers associated with the requested domain using sandbox
@@ -27,14 +27,14 @@
 # Help function
 function show_help() {
    echo
-   echo "usage:"
+   echo "Usage:"
    echo "./$(basename "$0") <--production|--sandbox> '<command>'"
    echo
    echo "   --production   set API production server environment"   
    echo "   --sandbox      set API test server environment" 
-   echo "   command        API command for execution"
+   echo "     command      API command for execution"
    echo
-   echo "example:"
+   echo "Example:"
    echo "Gets a list of DNS servers associated with the requested domain using sandbox"
    echo "./$(basename "$0") --sandbox 'namecheap.domains.dns.getList&SLD=domain&TLD=com'"
    echo
