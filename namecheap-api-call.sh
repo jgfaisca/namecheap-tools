@@ -2,7 +2,7 @@
 #######################################################################################
 # 
 # Script to programmatically call namecheap API. You need to change API_USER,
-# API_KEY and USER_NAME. API Response is saved on /tmp/response.xml
+# API_KEY and USER_NAME variables. API Response is saved on /tmp/response.xml
 # 
 # API documentation:
 # https://www.namecheap.com/support/api/intro.aspx
