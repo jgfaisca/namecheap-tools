@@ -1,27 +1,33 @@
 #!/bin/bash
-#
-# Programmatically call namecheap API. You need to change API_USER,
+#######################################################################################
+# 
+# Script to programmatically call namecheap API. You need to change API_USER,
 # API_KEY and USER_NAME. API Response is saved on /tmp/response.xml
 #
 # dependencies: 
-#   - add curl and dig
-#   - Internet access
+# - add curl and dig
+# - a working internet connection
 #
 # usage:
-#   ./namecheap-api-cal.sh <--production|--sandbox> '<command for execution>'
-#
+# ./namecheap-api-call.sh <--production|--sandbox> '<command>'
+#  --production: Set API production server environment   
+#  --sandbox   : Set API test server environment 
+#  command     : Command for execution
+# 
 # example:
-#   ./namecheap-api-cal.sh --sandbox 'namecheap.domains.dns.getList&SLD=domain&TLD=com'    
+# Gets a list of DNS servers associated with the requested domain using API sandbox
+# ./namecheap-api-call.sh --sandbox 'namecheap.domains.dns.getList&SLD=domain&TLD=com'    
 #
 # authors: 
-#    Jose G. Faisca <jose.faisca@gmail.com>>
+# Jose G. Faisca <jose.faisca@gmail.com>>
 #
+#######################################################################################
 
 # Help function
 function show_help() {
    echo
    echo "Usage:"
-   echo "./$(basename "$0") <--production|--sandbox> '<command for execution>'"
+   echo "./$(basename "$0") <--production|--sandbox> '<command>'"
    echo
    echo "Example:"
    echo "Gets a list of DNS servers associated with the requested domain using API sandbox"
