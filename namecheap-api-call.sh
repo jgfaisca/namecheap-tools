@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Programmatically Call namecheap API. You need to change API_USER,
+# Programmatically call namecheap API. You need to change API_USER,
 # API_KEY and USER_NAME. API Response is saved on /tmp/response.xml
 #
 # Author: Jose G. Faisca <jose.faisca@gmail.com>>
