@@ -2,7 +2,7 @@
 #######################################################################################
 # 
 # Script to programmatically call namecheap API. You need to change API_USER,
-# API_KEY and USER_NAME variables. API Response is saved on /tmp/response.xml
+# API_KEY and USER_NAME variables. API Response is saved on /tmp/namecheap/response.xml
 # 
 # API documentation:
 # https://www.namecheap.com/support/api/intro.aspx
@@ -79,6 +79,9 @@ URL_PRODUCTION="https://api.namecheap.com/xml.response"
 # API test server environment URL
 URL_SANDBOX="https://api.sandbox.namecheap.com/xml.response"
 
+# Response directory
+RESPONSE_DIR="/tmp/namecheap"
+
 # Set API environment URL
 case "$1" in
   --production)
@@ -104,7 +107,7 @@ Command=${API_COMMAND}'"
 echo
 echo $REQUEST
 echo
-eval $REQUEST > /tmp/response.xml
-cat /tmp/response.xml
+eval $REQUEST > $RESPONSE_DIR/response.xml
+cat $RESPONSE_DIR/response.xml
 
 exit 0
