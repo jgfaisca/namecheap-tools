@@ -23,7 +23,7 @@
 # ./namecheap-api-call.sh --sandbox 'namecheap.domains.dns.getList&SLD=domain&TLD=com'    
 #
 # authors: 
-# Jose G. Faisca <jose.faisca@gmail.com>>
+# Jose G. Faisca <jose.faisca@gmail.com>
 #
 #######################################################################################
 
