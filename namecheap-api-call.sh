@@ -83,13 +83,15 @@ esac
 # Verify curl command
 curl --version >/dev/null 2>&1
 if [ $? -ne 0 ]; then
-  echo "curl is not being recognized as a command; please install "
+  echo "curl is not being recognized as a command; please install"
+  exit 1
 fi
 
 # Verify dig command
 dig -version >/dev/null 2>&1
 if [ $? -ne 0 ]; then
-  echo "dig is not being recognized as a command; please install "
+  echo "dig is not being recognized as a command; please install"
+  exit 1
 fi
 
 # API call
